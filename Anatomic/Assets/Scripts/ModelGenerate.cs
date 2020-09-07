@@ -9,44 +9,49 @@ public class ModelGenerate : MonoBehaviour
     public GameObject btn;
     public Transform buttonHolder;
     Texture[] imgTexture;
+    private GameObject[] models;
+    private GameObject currentGameObject = null;
 
     public GameObject ring;
     // Start is called before the first frame update
     void Start()
     {
         imgTexture = Resources.LoadAll<Texture>("Image");
+        models = Resources.LoadAll<GameObject>("Model");
+        int index = 0;  
         foreach(Texture img in imgTexture)
         {
             GameObject ModelButton = Instantiate(btn as GameObject);
             ModelButton.transform.SetParent(buttonHolder);
             ModelButton.GetComponent<RawImage>().texture = img;
-            string modelname = img.name;
-            //Debug.Log(modelname);
-            ModelButton.GetComponent<Button>().onClick.AddListener(() => onModelChange(modelname));
-
+            // index = System.Array.IndexOf(imgTexture, img);
+            ModelButton.GetComponent<Button>().onClick.AddListener(() => onModelChange(System.Array.IndexOf(imgTexture, img)));
         }
 
     }
 
-    public void onModelChange(string modelname)
+    public void onModelChange(int index)
     {
-        GameObject go =  null;
+        Debug.Log(index);
+        GameObject modelname = models[index];
+        Destroy(currentGameObject);
         Debug.Log(modelname);
-        if(GameObject.FindGameObjectWithTag(modelname)!= null)
+        // if(GameObject.FindGameObjectWithTag("heart")!= null)
+        // {
+        //     go = GameObject.FindGameObjectWithTag(modelname);
+        // }
+        if(modelname != null)
         {
-            go = GameObject.FindGameObjectWithTag(modelname);
-        }
-        if(go != null)
-        {
-            if(!go.activeSelf)
-            {
-                go.SetActive(true);
-                go.transform.position = ring.transform.position;
-            }
-            else
-            {
-                go.SetActive(false);
-            }
+            // if(!modelname.activeSelf)
+            // {
+            //     // modelname.SetActive(true);
+                // modelname.transform.position = ring.transform.position;
+                currentGameObject = Instantiate(modelname, ring.transform.position , Quaternion.identity);
+            // }
+            // else
+            // {
+            //     modelname.SetActive(false);
+            // }
            
         }
     }
