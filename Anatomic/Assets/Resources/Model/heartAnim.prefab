@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2272301297377280625}
   - component: {fileID: 8400883357412034447}
   m_Layer: 0
-  m_Name: heart 1
+  m_Name: heartAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 555072987985295021}
   m_LocalRotation: {x: 0.00000008146036, y: 6.123234e-17, z: 6.1232336e-17, w: 1}
   m_LocalPosition: {x: 2.53, y: 0, z: 3}
-  m_LocalScale: {x: 1385.5828, y: 1385.5828, z: 1385.5828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
