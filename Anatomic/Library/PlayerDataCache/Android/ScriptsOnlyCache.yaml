@@ -48,6 +48,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Scene1.unity:
     - Class: 1
@@ -76,6 +77,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11172}
     - Class: 114
       Script: {instanceID: 11308}
+    - Class: 114
+      Script: {instanceID: 11362}
     - Class: 114
       Script: {instanceID: 11410}
     - Class: 114
@@ -121,6 +124,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13490}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
