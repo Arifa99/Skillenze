@@ -32,10 +32,8 @@ public class ModelGenerate : MonoBehaviour
 
     public void onModelChange(int index)
     {
-        Debug.Log(index);
         GameObject modelname = models[index];
         Destroy(currentGameObject);
-        Debug.Log(modelname);
         // if(GameObject.FindGameObjectWithTag("heart")!= null)
         // {
         //     go = GameObject.FindGameObjectWithTag(modelname);
