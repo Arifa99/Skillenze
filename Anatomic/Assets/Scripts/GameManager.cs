@@ -17,9 +17,16 @@ public class GameManager : MonoBehaviour
         infoBtn.SetActive(true);
     }
     private void Update() {
+
          if (Input.GetMouseButtonDown(0)) {
-             Enter();
-        }
+            Enter();
+         }
+
+         if (Input.GetKey("escape"))
+         {
+            Application.Quit();
+         }
+        
     }
 
 }
